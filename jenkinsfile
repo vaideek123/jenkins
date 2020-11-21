@@ -8,6 +8,12 @@ pipeline {
                sh 'sudo yum install maven -y'
             }
         }
+        stage('demo'){
+        
+            steps   {
+                sh 'cp /m /j'
+            }
+        }
         stage('test')  {
             when{
                     branch 'dev'

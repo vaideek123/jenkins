@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
            
             steps {
-                sudo 'yum install maven -y'
+                sudo yum install maven -y
             }
         }
         stage('test')  {

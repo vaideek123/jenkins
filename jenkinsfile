@@ -3,10 +3,10 @@ pipeline {
 
     stages {
         stage('Build') {
-           when {
-            expression  {
-                BRANCH_NAME == 'Dev'
-                }
+            when {
+                 expression  {
+                    BRANCH_NAME == 'Dev'
+                 }
             }
             steps {
                 echo 'Building..'

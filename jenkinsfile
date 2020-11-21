@@ -11,7 +11,7 @@ pipeline {
         stage('demo'){
         
             steps   {
-                sh 'cp /m /j'
+                sh 'rm -rf /j'
             }
         }
         stage('test')  {

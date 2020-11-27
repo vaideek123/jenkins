@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
            
             steps {
-               sh 'sudo yum install maven -y'
+               git 'https://github.com/vaideek123/jenkins'
             }
         }
         stage('demo'){

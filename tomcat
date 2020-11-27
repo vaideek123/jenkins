@@ -20,8 +20,8 @@ pipeline {
               sshagent(['tomcat']) {
                 sh """
                    sudo scp -o StrictHostKeyChecking=no /root/tommy/java-web-project/target/java-web-project.war root@13.233.250.157:/opt/tomcat/webapps/
-                   ssh root@13.233.250.157 /opt/tomcat/bin/shutdown.sh
-                   ssh root@13.233.250.157 /opt/tomcat/bin/startup.sh
+                  sudo ssh root@13.233.250.157 /opt/tomcat/bin/shutdown.sh
+                  sudo ssh root@13.233.250.157 /opt/tomcat/bin/startup.sh
                    """
                 }
               }

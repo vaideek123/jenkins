@@ -6,7 +6,7 @@ pipeline {
            
             steps {
             
-               git 'https://github.com/vaideek123/jenkins/edit/main/tomcat'
+               git 'https://github.com/vaideek123/jenkins.git'
             }
         }
         stage('maven')

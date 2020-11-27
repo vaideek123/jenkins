@@ -8,19 +8,4 @@ pipeline {
                git 'https://github.com/vaideek123/jenkins'
             }
         }
-        stage('demo'){
-        
-            steps   {
-                sh 'sudo cp /m /j'
-            }
-        }
-        stage('test')  {
-            when{
-                    branch 'dev'
-            }
-            steps {
-                echo 'test'
-            }
-        }
-    }
-}
+       

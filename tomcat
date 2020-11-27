@@ -9,13 +9,13 @@ pipeline {
                git 'https://github.com/vaideek123/jenkins.git'
             }
         }
-        stage('maven')
+        stage('maven'){
             steps{
                     
                      sh'mvn -f ~/tommy/java-web-project/pom.xml clean package'
             }
         }
-        stage("deploy-dev"){
+        stage('deploy-dev'){
             steps{
               sshagent(['tomcat']) {
                 sh """

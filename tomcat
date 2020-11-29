@@ -12,7 +12,7 @@ pipeline {
         stage("maven"){
             steps{
                     
-                     sh "sudo mvn -f /root/tommy/java-web-project/pom.xml clean package"
+                     sh "sudo mvn -f /root/java-web-project/pom.xml clean package"
             }
         }
         stage("deploy-dev"){

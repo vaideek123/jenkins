@@ -19,7 +19,7 @@ pipeline {
             steps{
               sshagent(['tomcat']) {
                 sh """
-                   sudo scp -o StrictHostKeyChecking=no /root/java-web-project/target/java-web-project.war ec2-user@13.233.164.242:/root/tomcat/webapps/
+                   sudo scp -o StrictHostKeyChecking=no /root/java-web-project/target/java-web-project.war ec2-user@13.233.164.242:/home/tomcat/webapps/
                    sudo ssh ec2-user@13.233.164.242 /root/tomcat/bin/shutdown.sh
                    sudo ssh ec2-user@13.233.164.242 /root/tomcat/bin/startup.sh
                    """
